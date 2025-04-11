@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import AboutSection from "./Components/AboutSection/AboutSection";
+import DescriptionSection from "./Components/DescriptionSection/DescriptionSection";
+import Header from "./Components/Header/Header";
+import OfferSection from "./Components/OfferSection/OfferSection";
+import RentalSection from "./Components/RentalSection/RentalSection";
+import ServiceSection from "./Components/ServiceSection/ServiceSection";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <Header />
+      <DescriptionSection />
+      <OfferSection/>
+      <AboutSection />
+      <ServiceSection items={[{name: 'Годовое ТО', link: '#'},{name: 'Выравнивание колес', link: '#'},{name: 'Настройка переключателей', link: '#'}]}/>
+      <RentalSection />
     </div>
   );
 }
